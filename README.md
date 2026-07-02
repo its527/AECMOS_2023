@@ -2,7 +2,7 @@
 
 Re-segment the [Microsoft AEC-Challenge ICASSP 2023 blind test set](https://github.com/microsoft/AEC-Challenge/tree/main/datasets/blind_test_set_icassp2023)
 into **near-end-singletalk**, **far-end-singletalk**, and **doubletalk** clips by
-*actual per-timestamp signal activity* instead of the original folder labels.
+*actual per-timestamp signal activity* fixing the original folder labels.
 
 Each recording is a pair of WAV files — a microphone capture (`*_mic.wav`) and the
 loudspeaker reference / loopback (`*_lpb.wav`). `segment_aec_pairs.py` scans the
@@ -49,7 +49,7 @@ blind_test_set_icassp2023/
 └── nearend-singletalk/
 ```
 
-The original folder names are **not** trusted — every pair is re-classified from its audio.
+The original folder names are not trusted, i.e. every pair is re-classified from its audio.
 
 ### Output layout
 
@@ -66,7 +66,7 @@ resegmented/
 
 Each output filename encodes the source id, the assigned scenario, a per-source index,
 and the `start-end` time span (in seconds) taken from the original recording. The
-written audio is the **original samples sliced for that span** — timing is never
+written audio is the **original samples sliced for that span** while timing is never
 modified. `segments_manifest.json` lists every segment with its source paths, scenario,
 timing, duration, echo return loss, and output paths.
 
@@ -132,13 +132,10 @@ guessed. See the header of `verify_pairs.py` for the precision/recall knobs.
 
 ## Known limitations
 
-- The near-end test keys on **voiced** speech; a near-end talker that is almost entirely
+- The near-end test keys on voiced speech; a near-end talker that is almost entirely
   unvoiced may be under-detected.
-- Far-end vs doubletalk cannot be resolved reliably for *every* pair from audio alone
+- Far-end vs doubletalk cannot be resolved reliably for every pair from audio alone
   (weak / reverberant / nonlinear echo is genuinely ambiguous). Treat the `doubletalk/`
   split as a first pass and use `verify_pairs.py` when precision matters.
 - Defaults are tuned for the ICASSP 2023 blind test set (the real files are 48 kHz mono).
 
-## License
-
-TODO — add a license before publishing (e.g. MIT).
