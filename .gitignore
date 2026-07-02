@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Generated output — don't commit segmented audio, manifests, plots, or collected sets
+resegmented/
+verify_out/
+clean_doubletalk/
+clean_dt/
+segments_manifest.json
+verify_report.json
+
+# The dataset itself is large — keep it out of the repo
+blind_test_set_icassp2023/
+
+# OS
+.DS_Store
+Thumbs.db
