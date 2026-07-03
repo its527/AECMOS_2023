@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AEC Model — Output Samples</title>
+<style>
+:root{--bg:#f5f6f8;--surface:#fff;--ink:#1a1d23;--muted:#616b78;--line:#e2e6ec;
+  --in:#c0392b;--ref:#2c6e9b;--out:#1e8449}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);line-height:1.5;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{padding:48px 0 24px;border-bottom:1px solid var(--line)}
+h1{margin:0 0 8px;font-size:28px;letter-spacing:-.01em}
+header p{margin:0;color:var(--muted);max-width:65ch}
+.legend{display:flex;gap:20px;flex-wrap:wrap;margin-top:18px;font-size:13px;color:var(--muted)}
+.legend b{font-weight:600}
+.legend .in{color:var(--in)} .legend .ref{color:var(--ref)} .legend .out{color:var(--out)}
+h2{margin:44px 0 4px;font-size:22px}
+h2 .sub{color:var(--muted);font-size:14px;font-weight:400;margin-left:10px}
+h3{margin:26px 0 10px;font-size:13px;font-weight:600;text-transform:uppercase;
+  letter-spacing:.07em;color:var(--muted)}
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:720px}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle}
+thead th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);
+  background:#fafbfc;position:sticky;top:0}
+th.in{color:var(--in)} th.ref{color:var(--ref)} th.out{color:var(--out)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:#fafbfc}
+td.samp{white-space:nowrap;width:118px}
+td.samp strong{font-weight:600;font-size:14px}
+td.samp .dur{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+audio{width:230px;max-width:100%;height:36px}
+.na{font-size:12px;color:var(--muted);font-style:italic}
+footer{color:var(--muted);font-size:12px;padding:36px 0 56px;border-top:1px solid var(--line);margin-top:44px}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;background:#eceff3;padding:1px 5px;border-radius:4px}
+</style>
+</head><body>
+<header><div class="wrap">
+<h1>AEC Model — Output Samples</h1>
+<p>Listen to the model's output next to the raw microphone input and the far-end reference.
+The microphone signal contains the echo; the <b>output</b> is what the model produced.</p>
+<div class="legend">
+<span><b class="in">Input</b> — microphone (with echo)</span>
+<span><b class="ref">Reference</b> — loudspeaker / loopback</span>
+<span><b class="out">Output</b> — model result</span>
+</div>
+</div></header>
+<main><div class="wrap">
+<h2>16 kHz<span class="sub">15 samples</span></h2>
+<h3>Near-end singletalk</h3><div class="tablewrap"><table><thead><tr><th>Sample</th><th class="in">Input (mic)</th><th class="ref">Reference</th><th class="out">Output (clean)</th></tr></thead><tbody>
+<tr><td class="samp"><strong>Sample 1</strong><span class="dur">18.4s</span></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample1_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample1_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample1_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 2</strong><span class="dur">11.1s</span></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample2_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample2_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample2_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 3</strong><span class="dur">16.5s</span></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample3_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample3_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample3_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 4</strong><span class="dur">11.0s</span></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample4_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample4_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample4_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 5</strong><span class="dur">21.8s</span></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample5_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample5_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/nearend-singletalk/sample5_clean.wav"></audio></td></tr>
+</tbody></table></div>
+<h3>Far-end singletalk</h3><div class="tablewrap"><table><thead><tr><th>Sample</th><th class="in">Input (mic)</th><th class="ref">Reference</th><th class="out">Output (clean)</th></tr></thead><tbody>
+<tr><td class="samp"><strong>Sample 1</strong><span class="dur">24.0s</span></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample1_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample1_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample1_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 2</strong><span class="dur">10.4s</span></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample2_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample2_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample2_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 3</strong><span class="dur">24.0s</span></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample3_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample3_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample3_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 4</strong><span class="dur">24.0s</span></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample4_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample4_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample4_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 5</strong><span class="dur">12.5s</span></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample5_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample5_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/farend-singletalk/sample5_clean.wav"></audio></td></tr>
+</tbody></table></div>
+<h3>Doubletalk</h3><div class="tablewrap"><table><thead><tr><th>Sample</th><th class="in">Input (mic)</th><th class="ref">Reference</th><th class="out">Output (clean)</th></tr></thead><tbody>
+<tr><td class="samp"><strong>Sample 1</strong><span class="dur">11.3s</span></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample1_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample1_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample1_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 2</strong><span class="dur">12.1s</span></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample2_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample2_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample2_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 3</strong><span class="dur">12.5s</span></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample3_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample3_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample3_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 4</strong><span class="dur">11.8s</span></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample4_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample4_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample4_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 5</strong><span class="dur">11.0s</span></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample5_mic.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample5_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/16kHz/doubletalk/sample5_clean.wav"></audio></td></tr>
+</tbody></table></div>
+<h2>32 kHz<span class="sub">15 samples</span></h2>
+<h3>Near-end singletalk</h3><div class="tablewrap"><table><thead><tr><th>Sample</th><th class="in">Input (mic)</th><th class="ref">Reference</th><th class="out">Output (clean)</th></tr></thead><tbody>
+<tr><td class="samp"><strong>Sample 1</strong><span class="dur">18.4s</span></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample1_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample1_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample1_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 2</strong><span class="dur">11.1s</span></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample2_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample2_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample2_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 3</strong><span class="dur">16.5s</span></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample3_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample3_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample3_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 4</strong><span class="dur">11.0s</span></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample4_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample4_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample4_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 5</strong><span class="dur">21.8s</span></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample5_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample5_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/nearend-singletalk/sample5_clean.wav"></audio></td></tr>
+</tbody></table></div>
+<h3>Far-end singletalk</h3><div class="tablewrap"><table><thead><tr><th>Sample</th><th class="in">Input (mic)</th><th class="ref">Reference</th><th class="out">Output (clean)</th></tr></thead><tbody>
+<tr><td class="samp"><strong>Sample 1</strong><span class="dur">24.0s</span></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample1_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample1_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample1_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 2</strong><span class="dur">10.4s</span></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample2_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample2_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample2_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 3</strong><span class="dur">24.0s</span></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample3_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample3_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample3_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 4</strong><span class="dur">24.0s</span></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample4_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample4_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample4_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 5</strong><span class="dur">12.5s</span></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample5_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample5_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/farend-singletalk/sample5_clean.wav"></audio></td></tr>
+</tbody></table></div>
+<h3>Doubletalk</h3><div class="tablewrap"><table><thead><tr><th>Sample</th><th class="in">Input (mic)</th><th class="ref">Reference</th><th class="out">Output (clean)</th></tr></thead><tbody>
+<tr><td class="samp"><strong>Sample 1</strong><span class="dur">11.3s</span></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample1_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample1_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample1_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 2</strong><span class="dur">12.1s</span></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample2_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample2_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample2_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 3</strong><span class="dur">12.5s</span></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample3_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample3_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample3_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 4</strong><span class="dur">11.8s</span></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample4_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample4_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample4_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 5</strong><span class="dur">11.0s</span></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample5_mic.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample5_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/32kHz/doubletalk/sample5_clean.wav"></audio></td></tr>
+</tbody></table></div>
+<h2>48 kHz<span class="sub">15 samples</span></h2>
+<h3>Near-end singletalk</h3><div class="tablewrap"><table><thead><tr><th>Sample</th><th class="in">Input (mic)</th><th class="ref">Reference</th><th class="out">Output (clean)</th></tr></thead><tbody>
+<tr><td class="samp"><strong>Sample 1</strong><span class="dur">18.4s</span></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample1_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample1_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample1_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 2</strong><span class="dur">11.1s</span></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample2_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample2_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample2_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 3</strong><span class="dur">16.5s</span></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample3_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample3_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample3_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 4</strong><span class="dur">11.0s</span></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample4_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample4_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample4_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 5</strong><span class="dur">21.8s</span></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample5_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample5_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/nearend-singletalk/sample5_clean.wav"></audio></td></tr>
+</tbody></table></div>
+<h3>Far-end singletalk</h3><div class="tablewrap"><table><thead><tr><th>Sample</th><th class="in">Input (mic)</th><th class="ref">Reference</th><th class="out">Output (clean)</th></tr></thead><tbody>
+<tr><td class="samp"><strong>Sample 1</strong><span class="dur">24.0s</span></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample1_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample1_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample1_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 2</strong><span class="dur">10.4s</span></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample2_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample2_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample2_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 3</strong><span class="dur">24.0s</span></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample3_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample3_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample3_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 4</strong><span class="dur">24.0s</span></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample4_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample4_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample4_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 5</strong><span class="dur">12.5s</span></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample5_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample5_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/farend-singletalk/sample5_clean.wav"></audio></td></tr>
+</tbody></table></div>
+<h3>Doubletalk</h3><div class="tablewrap"><table><thead><tr><th>Sample</th><th class="in">Input (mic)</th><th class="ref">Reference</th><th class="out">Output (clean)</th></tr></thead><tbody>
+<tr><td class="samp"><strong>Sample 1</strong><span class="dur">11.3s</span></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample1_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample1_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample1_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 2</strong><span class="dur">12.1s</span></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample2_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample2_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample2_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 3</strong><span class="dur">12.5s</span></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample3_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample3_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample3_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 4</strong><span class="dur">11.8s</span></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample4_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample4_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample4_clean.wav"></audio></td></tr>
+<tr><td class="samp"><strong>Sample 5</strong><span class="dur">11.0s</span></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample5_mic.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample5_lpb.wav"></audio></td><td><audio controls preload="none" src="audio/48kHz/doubletalk/sample5_clean.wav"></audio></td></tr>
+</tbody></table></div></div></main>
+<footer><div class="wrap">All clips are <code>.wav</code>. To view locally you can open index.html directly, but some browsers block audio over file://; if a clip won't play, run <code>python -m http.server</code> from inside this folder. To publish, upload the whole folder to any static host (see the README).</div></footer>
+</body></html>
